@@ -1,15 +1,7 @@
 <h1> To-do #<%= params[:id]%></h1>
 <div class = show>
-<h1>To-do's</h1>
-<input type = "text" placeholder ="Calculus" class = "text-input" id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit"   value = "Submit for Calculus"class ="button" id = "add-new-to-do-button"><br></br>
-<li><input type = "text" placeholder ="Programming" class = "text-input" id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit"  value = "Submit for Programming"class ="button" id = "add-new-to-do-button"><br></br>
-<input type = "text" placeholder ="French 4" class = "text-input" id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit" value = "Submit for French 4"class ="button" id = "add-new-to-do-button"><br></br>
-<input type = "text" placeholder ="Chemistry" class = "text-input"id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit" value = "Submit for Chemistry"class ="button" id = "add-new-to-do-button"><br></br>
-<input type = "text" placeholder ="Health" class = "text-input" id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit" value = "Submit for Health"class ="button" id = "add-new-to-do-button"><br></br>
-<input type = "text" placeholder ="English" class = "text-input"id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-pomodoro-estimate"><input type = "submit"   value = "Submit for English"class ="button" id = "add-new-to-do-button"><br></br>
-<input type = "text" placeholder ="AP World History"class = "text-input" id ="new-to-do-description"><input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-Pomodoro-estimate"><input type = "submit" value = "Submit for Ap World History"class ="button" id = "add-new-to-do-button"><br></br>
 <li> <%=@todo.description%> <%=@todo.pomodoro_estimate%></li>
-<li><a href = "index.html">Index</li>
-<li><a href = "edit">Edit</li>
-<li><a href = "delete">Delete</li>
+<li><a href = "/">Index</li>
+<li><a href = "/todo/edit/<%= @todo.id %>" class = "button edit-todo-button">Edit</a>
+<li><a href = "/todo/destroy/<%= @todo.id %>" class = "button delete-todo-button">Delete</a>
 </div>

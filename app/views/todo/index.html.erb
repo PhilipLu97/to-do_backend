@@ -1,26 +1,28 @@
 <div class = index>
-<h1>here come that b0i!!!!!!!</h1>
-    <h1><a href = "show"><span>Actually productive stuff</span></h1></a>
+<h1>here come that b0i!!!!!!!</h1><br></br>
+    <h1><a ><span>Actually productive stuff</span></h1></a>
         <div id = "new-todo-block">
-         <input type = "text" placeholder ="Description" class = "text-input" id ="new-todo-description">
-        <input type = "number" placeholder = "Pomodoro estimate" class = "text-input" id = "new-pomodoro-estimate">
-        <input type = "submit" value = "Click here ;)" class ="button" id = "add-new-todo-button">
         </div>
        <ul>
-          <h2><li class = "item"><input type ="checkbox">Eat breakfast</li>
-           <li class = "item"><input type ="checkbox">Code</li>
-           <li class = "item"><input type ="checkbox">Eat lunch</li>
-           <li class = "item"><input type ="checkbox">Code again</li> 
-           <li class = "item"><input type ="checkbox">Eat Dinner</li>
-           <li class = "item"><input type ="checkbox">Do homework</li>
-           <li class = "item"><input type ="checkbox">Shower</li>
-           <li class = "item"><input type ="checkbox">Read</li>
-           <li class = "item"><input type ="checkbox">Sleep</li>
-           <li class = "memes"><a href = "Pinkguy.html"> Pinkguy</li>
-           <li class = "memes"><a href = "LeOgre.html">Le OGRE</li>
-           <li class = "memes"><a href = "REEEEEE.html">REEEEEEE</li>
-           <li class = "memes"><a href = "Cory.html">Free Anime</li>
-           <li class = "memes"><a href = "h3h3.html">Go green</li>
-           </h2>       </ul>
+         <% @todos.each do |todo| %>
+           <li>
+               <input type = "checkbox" name = "">
+               <a href = "todo/show/<%= todo.id %>"><%= todo.description %>
+               <span class = "pomodoro-estimate"><%= todo.pomodoro_estimate%> Pomodoros</span> 
+               </a>
+               <!-- this makes the entire thing a link -->
+           </li>    
+           <% end %>
+    <h1>Memes (to be continued)</h1>
+           <li class = "nyes"><a href = "Pinkguy"> Pinkguy</li>
+           <li class = "swamp"><a href = "LeOgre">Le OGRE</li>
+           <li class = "pepe"><a href = "REEEEEE">REEEEEEE</li>
+           <li class = "blacc"><a href = "Cory">Free Anime</li>
+           <li class = "vape"><a href = "h3h3">Go green</li>
+           <li class = "meat"><a href = "Yeahbwoi">Good ol'rub</li>
+           </h2>       
+       </ul>
+       <div id = "new-todo-block">
+           <a href = "/todo/new" class = "button add-new-todo-button" id ="add-new-todo-button"> Add a todo</a>
+       </div>
 </div>
-
